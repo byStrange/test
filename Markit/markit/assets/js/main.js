@@ -56,7 +56,10 @@
 		$(".sidebar__area").removeClass("sidebar-opened");
 		$(".body-overlay").removeClass("opened");
 	});
-
+	$(window).on("resize", function() {
+		$(".sidebar__area").removeClass("sidebar-opened");
+		$(".body-overlay").removeClass("opened");
+	})
 	////////////////////////////////////////////////////
     // 02. Cart Toggle Js
 	$(".cart-toggle-btn").on("click", function () {
@@ -411,3 +414,7 @@
 	};
 
 })(jQuery);
+let images_ = document.querySelectorAll('img')
+for(their of images_) {
+	their.draggable = false
+}
